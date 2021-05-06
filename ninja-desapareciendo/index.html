@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("document").ready(function () {
+        $("img").click(function () {
+          $(this).hide();
+        });
+        $("#btn").click(function () {
+          $("img").show();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <h3>jQuery - assignment 1</h3>
+      <div class="row">
+        <img src="ninja.jpg" alt="ninja" />
+        <img src="ninja.jpg" alt="ninja" />
+        <img src="ninja.jpg" alt="ninja" />
+        <img src="ninja.jpg" alt="ninja" />
+        <img src="ninja.jpg" alt="ninja" />
+        <img src="ninja.jpg" alt="ninja" />
+        <img src="ninja.jpg" alt="ninja" />
+        <img src="ninja.jpg" alt="ninja" />
+      </div>
+      <button id="btn">Restore</button>
+    </div>
+  </body>
+</html>

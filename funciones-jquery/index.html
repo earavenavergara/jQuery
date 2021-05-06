@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My jQuery basic assignment!</title>
+    <style>
+      .red {
+        color: red;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $("document").ready(function () {
+        var txt = $(".row3 p").text();
+        $(".btn1").click(function () {
+          $(".row1 p").addClass("red");
+        });
+        $(".btn2").click(function () {
+          $(".row2 p").slideToggle("slow");
+        });
+        $(".btn3").click(function () {
+          $(".row3 p").append("<br>" + txt);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="row1">
+        <h1>AddClass</h1>
+        <button class="btn1">AddClass</button>
+        <p>Click the button to add class 'red' to this paragraph</p>
+        <hr />
+      </div>
+      <div class="row2">
+        <h1>Slidetoggle</h1>
+        <button class="btn2">Slidetoggle</button>
+        <p>Click the button to slidetoggle a hidden image</p>
+        <hr />
+      </div>
+      <div class="row3">
+        <h1>Append</h1>
+        <button class="btn3">Append</button>
+        <p>Click the button to append a new paragraph!</p>
+        <hr />
+      </div>
+    </div>
+  </body>
+</html>
