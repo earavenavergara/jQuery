@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>in-out</title>
+    <style>
+      img {
+        width: 200px;
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("img").hover(
+          function () {
+            //console.log("out");
+            $(this).attr("src", $(this).attr("out-src2"));
+          },
+          function () {
+            //console.log("in");
+            $(this).attr("src", $(this).attr("in-src1"));
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <img
+      src="img/in-1.png"
+      alt="img-1"
+      in-src1="img/in-1.png"
+      out-src2="img/out-1.png"
+    />
+    <img
+      src="img/in-2.png"
+      alt="img-2"
+      in-src1="img/in-2.png"
+      out-src2="img/out-2.png"
+    />
+    <img
+      src="img/in-3.png"
+      alt="img-3"
+      in-src1="img/in-3.png"
+      out-src2="img/out-3.png"
+    />
+    <img
+      src="img/in-4.png"
+      alt="img-4"
+      in-src1="img/in-4.png"
+      out-src2="img/out-4.png"
+    />
+  </body>
+</html>
